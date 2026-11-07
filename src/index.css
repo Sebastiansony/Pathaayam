@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #064e3b;
+  --color-forest-deep: #032e23;
+  --color-leaf: #15803d;
+  --color-lime: #22c55e;
+  --color-cream: #f8f4ea;
+  --color-parchment: #efe7d4;
+  --color-bark: #2a2017;
+  --color-saffron: #c9821f;
+  --color-chili: #b4401f;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Manrope", ui-sans-serif, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-bark);
+  -webkit-font-smoothing: antialiased;
+}
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+}
+
+.leaf-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgba(6, 78, 59, 0.09) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #c8bfa8; border-radius: 99px; }
+
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.animate-marquee { animation: marquee 40s linear infinite; }
