@@ -1,0 +1,11 @@
+# The app lives in a subdirectory, so point Netlify's build at it.
+[build]
+  base = "agon-agent_1-6f53dc64"
+  command = "npm install --include=dev --no-audit --no-fund && npm run build"
+  publish = "dist"
+
+# Single-page app fallback for client-side routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
