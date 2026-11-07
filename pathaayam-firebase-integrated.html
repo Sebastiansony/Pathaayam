@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pathaayam — Authentic Spices from Idukki, Kerala</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{900:'#064e3b',800:'#065f46',700:'#15803d',600:'#16a34a',500:'#22c55e',100:'#dcfce7',50:'#f0fdf4'},cream:'#FFFBEB',paper:'#FFFDF5',ink:'#10201a'},fontFamily:{display:['"Playfair Display"','serif'],sans:['"Plus Jakarta Sans"','sans-serif']},boxShadow:{soft:'0 20px 50px rgba(6,78,59,.12)',card:'0 10px 30px rgba(0,0,0,.08)'}}}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*{-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif}
+.font-display{font-family:'Playfair Display',serif}
+::-webkit-scrollbar{width:9px;height:9px}::-webkit-scrollbar-thumb{background:#15803d;border-radius:99px}::-webkit-scrollbar-track{background:#ecfdf5}
+.marquee{animation:marquee 22s linear infinite}@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.floaty{animation:floaty 5s ease-in-out infinite}@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.floaty2{animation:floaty 6s ease-in-out infinite reverse}
+.leaf-bg{background-image:radial-gradient(circle at 15% 20%,rgba(34,197,94,.14) 0,transparent 28%),radial-gradient(circle at 85% 10%,rgba(21,128,61,.12) 0,transparent 32%),radial-gradient(circle at 90% 85%,rgba(34,197,94,.10) 0,transparent 30%)}
+.card-hover{transition:.35s cubic-bezier(.2,.8,.2,1)}.card-hover:hover{transform:translateY(-6px);box-shadow:0 24px 45px rgba(6,78,59,.16)}
+.shimmer{background:linear-gradient(90deg,#e7f5ec 25%,#f0fdf4 50%,#e7f5ec 75%);background-size:200% 100%;animation:shim 1.4s infinite}@keyframes shim{to{background-position:-200% 0}}
+.pulse-dot{animation:pulseDot 1.6s infinite}@keyframes pulseDot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
+.modal{transition:.25s}.drawer{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+input,select,textarea{outline:none}input:focus,select:focus,textarea:focus{border-color:#22c55e!important;box-shadow:0 0 0 3px rgba(34,197,94,.18)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease}.faq-item.open .faq-answer{max-height:220px}.faq-item.open .faq-icon{transform:rotate(45deg)}
+.toast{animation:toastIn .3s ease}@keyframes toastIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+</style>
+</head>
+<body class="bg-paper text-ink antialiased overflow-x-hidden">
+
+<!-- ANNOUNCEMENT -->
+<div class="bg-brand-900 text-white overflow-hidden py-2 text-[12px] md:text-[13px] font-semibold tracking-wide">
+  <div class="marquee flex whitespace-nowrap gap-10 w-max" id="announcementText">
+    <span>🌿 FREE DELIVERY ACROSS INDIA ON ORDERS ABOVE ₹999</span><span>•</span><span>FARM-FRESH FROM IDUKKI, KERALA</span><span>•</span><span>NO PRESERVATIVES • SUN-DRIED • SMALL BATCH PACKED</span><span>•</span><span>ORDER ON WHATSAPP &amp; INSTAGRAM</span><span>•</span>
+    <span>🌿 FREE DELIVERY ACROSS INDIA ON ORDERS ABOVE ₹999</span><span>•</span><span>FARM-FRESH FROM IDUKKI, KERALA</span><span>•</span><span>NO PRESERVATIVES • SUN-DRIED • SMALL BATCH PACKED</span><span>•</span><span>ORDER ON WHATSAPP &amp; INSTAGRAM</span><span>•</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-green-100">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 h-[72px] flex items-center justify-between gap-3">
+    <a href="#home" class="flex items-center gap-3">
+      <div class="w-11 h-11 rounded-2xl bg-brand-900 text-white grid place-items-center shadow-soft relative overflow-hidden">
+        <span class="font-display text-2xl font-bold">P</span><span class="absolute -right-1 -bottom-2 text-[22px] opacity-30">🌿</span>
+      </div>
+      <div class="leading-none">
+        <p class="font-display text-[26px] font-bold text-brand-900 tracking-tight">Pathaayam</p>
+        <p class="text-[10px] tracking-[0.22em] font-bold text-brand-700">SPICES • IDUKKI • KERALA</p>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[14px] font-semibold text-slate-700">
+      <a href="#shop" class="hover:text-brand-700">Shop</a><a href="#about" class="hover:text-brand-700">Our Story</a><a href="#process" class="hover:text-brand-700">Process</a><a href="#contact" class="hover:text-brand-700">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button onclick="toggleCart(true)" class="relative w-11 h-11 rounded-full bg-brand-50 border border-green-100 grid place-items-center hover:bg-brand-100">
+        <svg class="w-5 h-5 text-brand-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <span id="cartCount" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-600 text-white text-[11px] font-bold rounded-full grid place-items-center">0</span>
+      </button>
+      <button onclick="openAdminLogin()" class="hidden sm:flex items-center gap-2 bg-brand-900 text-white px-4 py-2.5 rounded-full text-sm font-bold hover:bg-brand-800 shadow-soft">🔒 Admin</button>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="lg:hidden w-11 h-11 rounded-full border grid place-items-center">☰</button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden lg:hidden border-t bg-white px-5 py-4 space-y-3 font-semibold"><a href="#shop" class="block">Shop</a><a href="#about" class="block">Our Story</a><a href="#process" class="block">Process</a><a href="#contact" class="block">Contact</a><button onclick="openAdminLogin()" class="w-full bg-brand-900 text-white py-3 rounded-xl">🔒 Admin Login</button></div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative leaf-bg overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 pt-10 md:pt-16 pb-14 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-white border border-green-100 shadow-sm px-4 py-2 rounded-full text-xs font-bold text-brand-800"><span class="w-2 h-2 bg-brand-500 rounded-full pulse-dot"></span> FARM FRESH • DIRECT FROM IDUKKI HILLS</div>
+      <h1 id="heroHeadline" class="font-display text-[44px] leading-[0.95] md:text-[72px] font-bold text-brand-900 mt-5">Real Spice.<br/><span class="italic text-brand-600">Real Idukki.</span><br/>Real Pathaayam.</h1>
+      <p id="heroSub" class="mt-4 text-lg md:text-xl font-bold text-slate-800">From the misty cardamom hills of Kerala to your kitchen.</p>
+      <p id="heroIntro" class="mt-3 text-slate-600 leading-relaxed max-w-xl">Hand-picked, sun-dried and small-batch packed spices sourced directly from Idukki farmers. No middlemen, no preservatives — just pure, aromatic spice the way nature intended.</p>
+      <div class="flex flex-wrap gap-3 mt-7">
+        <a href="#shop" class="bg-brand-700 hover:bg-brand-600 text-white px-7 py-4 rounded-full font-bold shadow-soft flex items-center gap-2">Shop Spices <span>→</span></a>
+        <button onclick="orderWhatsAppGeneral()" class="bg-white border-2 border-brand-700 text-brand-800 px-7 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-green-50">💬 WhatsApp Order</button>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mt-10 max-w-lg">
+        <div><p class="font-display text-3xl font-bold text-brand-900"><span data-count="1200">0</span>+</p><p class="text-xs font-bold tracking-wide text-slate-500">HAPPY FAMILIES</p></div>
+        <div><p class="font-display text-3xl font-bold text-brand-900"><span data-count="85">0</span>+</p><p class="text-xs font-bold tracking-wide text-slate-500">FARM PARTNERS</p></div>
+        <div><p class="font-display text-3xl font-bold text-brand-900">4.9★</p><p class="text-xs font-bold tracking-wide text-slate-500">AVERAGE RATING</p></div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="rounded-[32px] overflow-hidden shadow-soft border-[6px] border-white rotate-1">
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1000&q=80&auto=format&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=1000&q=80'" class="w-full h-[420px] md:h-[520px] object-cover" alt="Idukki Spices"/>
+      </div>
+      <div class="absolute -left-3 md:-left-6 top-8 bg-white rounded-2xl shadow-card p-4 floaty flex items-center gap-3">
+        <div class="w-12 h-12 bg-green-100 rounded-xl grid place-items-center text-xl">🌿</div>
+        <div><p class="text-xs font-bold text-slate-500">THIS WEEK'S HARVEST</p><p class="font-bold text-brand-900">Green Cardamom • 1.5kg ₹2,800</p></div>
+      </div>
+      <div class="absolute -right-2 md:-right-4 bottom-10 bg-brand-900 text-white rounded-2xl shadow-card p-4 floaty2">
+        <p class="text-xs opacity-80 font-bold">100% Natural</p><p class="font-display text-xl font-bold">No Preservatives</p><p class="text-xs mt-1">Sun-dried • Lab checked</p>
+      </div>
+      <div class="absolute left-6 -bottom-5 bg-white rounded-full shadow-card px-5 py-3 flex items-center gap-2 font-bold text-sm"><span>⭐⭐⭐⭐⭐</span> Loved across Kerala &amp; India</div>
+    </div>
+  </div>
+  <!-- Trust bar -->
+  <div class="max-w-7xl mx-auto px-4 md:px-6 pb-10">
+    <div class="bg-white rounded-[24px] border border-green-100 shadow-sm grid grid-cols-2 md:grid-cols-4 divide-x divide-green-50">
+      <div class="p-5 flex gap-3 items-center"><span class="text-2xl">🚜</span><div><p class="font-bold text-sm">Direct Farmers</p><p class="text-xs text-slate-500">No middlemen</p></div></div>
+      <div class="p-5 flex gap-3 items-center"><span class="text-2xl">☀️</span><div><p class="font-bold text-sm">Sun Dried</p><p class="text-xs text-slate-500">Traditional method</p></div></div>
+      <div class="p-5 flex gap-3 items-center"><span class="text-2xl">📦</span><div><p class="font-bold text-sm">Small Batch</p><p class="text-xs text-slate-500">Packed fresh</p></div></div>
+      <div class="p-5 flex gap-3 items-center"><span class="text-2xl">🛡️</span><div><p class="font-bold text-sm">Quality Checked</p><p class="text-xs text-slate-500">Every lot tested</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="max-w-7xl mx-auto px-4 md:px-6 py-14">
+  <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+    <div>
+      <p class="text-brand-700 font-bold tracking-[0.2em] text-xs">OUR COLLECTION</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-brand-900 mt-2">Shop Farm-Fresh Spices</h2>
+      <p class="text-slate-600 mt-2">Choose a category (or add your own in the Admin panel), pick a weight and order instantly.</p>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+      <div class="relative flex-1 md:w-72"><span class="absolute left-4 top-3.5">🔍</span><input id="searchInput" oninput="renderProducts()" placeholder="Search cardamom, pepper..." class="w-full pl-11 pr-4 py-3.5 rounded-full border border-slate-200 bg-white font-medium"/></div>
+      <select id="sortSelect" onchange="renderProducts()" class="px-4 py-3.5 rounded-full border border-slate-200 bg-white font-semibold">
+        <option value="featured">Sort: Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="name">Name A-Z</option>
+      </select>
+    </div>
+  </div>
+  <div id="categoryPills" class="flex flex-wrap gap-2 mt-7"></div>
+  <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8"></div>
+  <p id="noResult" class="hidden text-center py-16 text-slate-500 font-semibold">No spices found. Try another search 🌿</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-brand-900 text-white py-16 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-2 gap-4">
+      <img src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=700&q=80" onerror="this.src='https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=700'" class="rounded-3xl h-64 w-full object-cover mt-8"/>
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=700&q=80" onerror="this.src='https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=700'" class="rounded-3xl h-64 w-full object-cover"/>
+      <div class="col-span-2 bg-white/10 backdrop-blur rounded-3xl p-5 flex justify-between items-center"><div><p class="font-display text-3xl font-bold">Since 2018</p><p class="text-sm opacity-80">Serving Idukki's finest to homes across India</p></div><span class="text-4xl">🌿</span></div>
+    </div>
+    <div>
+      <p class="tracking-[0.25em] text-brand-500 font-bold text-xs">OUR STORY</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-3 leading-tight">Born in the Hills of Idukki, <span class="italic text-brand-500">Packed with Pride.</span></h2>
+      <p class="mt-5 text-white/80 leading-relaxed">Pathaayam began as a small family initiative to bring Idukki's world-famous spices directly to families — without compromising on purity. Every pod, berry and quill is hand-sorted by the farmers who grew it.</p>
+      <div class="space-y-4 mt-8">
+        <div class="flex gap-4"><div class="w-11 h-11 shrink-0 bg-brand-500 rounded-full grid place-items-center font-bold">1</div><div><p class="font-bold">Harvested at Peak</p><p class="text-sm text-white/70">Picked only when aroma & oil content are at their highest.</p></div></div>
+        <div class="flex gap-4"><div class="w-11 h-11 shrink-0 bg-brand-500 rounded-full grid place-items-center font-bold">2</div><div><p class="font-bold">Sun-Dried Naturally</p><p class="text-sm text-white/70">No machines, no chemicals. Just Kerala sun and time.</p></div></div>
+        <div class="flex gap-4"><div class="w-11 h-11 shrink-0 bg-brand-500 rounded-full grid place-items-center font-bold">3</div><div><p class="font-bold">Packed Fresh For You</p><p class="text-sm text-white/70">Sealed in food-grade packs only after you order.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="max-w-7xl mx-auto px-4 md:px-6 py-16">
+  <h2 class="font-display text-4xl font-bold text-brand-900 text-center">From Farm to Your Kitchen</h2><p class="text-center text-slate-600 mt-2">A simple, honest process — no shortcuts.</p>
+  <div class="grid md:grid-cols-4 gap-5 mt-10">
+    <div class="bg-white rounded-3xl p-6 border border-green-100 text-center card-hover"><div class="text-4xl">🌱</div><p class="font-bold mt-3">Cultivation</p><p class="text-sm text-slate-500 mt-1">Organic farming in Idukki's high ranges at 900m+ altitude.</p></div>
+    <div class="bg-white rounded-3xl p-6 border border-green-100 text-center card-hover"><div class="text-4xl">✋</div><p class="font-bold mt-3">Hand Picking</p><p class="text-sm text-slate-500 mt-1">Selected pod by pod for size, colour and aroma.</p></div>
+    <div class="bg-white rounded-3xl p-6 border border-green-100 text-center card-hover"><div class="text-4xl">☀️</div><p class="font-bold mt-3">Sun Drying</p><p class="text-sm text-slate-500 mt-1">Slow dried to lock in essential oils and flavour.</p></div>
+    <div class="bg-white rounded-3xl p-6 border border-green-100 text-center card-hover"><div class="text-4xl">📦</div><p class="font-bold mt-3">Fresh Packing</p><p class="text-sm text-slate-500 mt-1">Weighed, packed & shipped within 24 hours.</p></div>
+  </div>
+</section>
+
+<!-- FAQ + CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto px-4 md:px-6 py-16 grid lg:grid-cols-2 gap-10">
+  <div>
+    <h2 class="font-display text-4xl font-bold text-brand-900">Frequently Asked</h2>
+    <div class="space-y-3 mt-8" id="faqWrap">
+      <div class="faq-item bg-white border border-green-100 rounded-2xl p-5 cursor-pointer" onclick="this.classList.toggle('open')"><div class="flex justify-between font-bold">How do I place an order? <span class="faq-icon transition">+</span></div><div class="faq-answer"><p class="pt-3 text-slate-600 text-sm">Choose a spice & weight, click Buy Now, fill your details and order instantly via WhatsApp or Instagram. We confirm on chat within minutes.</p></div></div>
+      <div class="faq-item bg-white border border-green-100 rounded-2xl p-5 cursor-pointer" onclick="this.classList.toggle('open')"><div class="flex justify-between font-bold">Is delivery available across India? <span class="faq-icon transition">+</span></div><div class="faq-answer"><p class="pt-3 text-slate-600 text-sm">Yes! We ship pan-India in 3-5 working days. Free delivery on orders above ₹999.</p></div></div>
+      <div class="faq-item bg-white border border-green-100 rounded-2xl p-5 cursor-pointer" onclick="this.classList.toggle('open')"><div class="flex justify-between font-bold">Are your spices organic? <span class="faq-icon transition">+</span></div><div class="faq-answer"><p class="pt-3 text-slate-600 text-sm">Our partner farms in Idukki follow natural farming practices with no chemical preservatives or artificial colours.</p></div></div>
+      <div class="faq-item bg-white border border-green-100 rounded-2xl p-5 cursor-pointer" onclick="this.classList.toggle('open')"><div class="flex justify-between font-bold">How is payment done? <span class="faq-icon transition">+</span></div><div class="faq-answer"><p class="pt-3 text-slate-600 text-sm">UPI, bank transfer or Cash on Delivery — we share payment details on WhatsApp after you place your order.</p></div></div>
+    </div>
+  </div>
+  <div class="bg-brand-900 rounded-[28px] p-7 md:p-8 text-white relative overflow-hidden">
+    <p class="tracking-[0.2em] text-xs font-bold text-brand-500">GET IN TOUCH</p>
+    <h3 class="font-display text-3xl font-bold mt-2">Order with Pathaayam</h3>
+    <p class="text-white/70 text-sm mt-2">Our team replies fast on both platforms. Save time — your order details are pre-filled for you.</p>
+    <div class="bg-white/10 rounded-2xl p-5 mt-6">
+      <p class="font-bold flex items-center gap-2">💬 WhatsApp</p><p class="text-sm text-white/70 mt-1">Number: <span id="contactWA" class="font-bold text-white">+91 98765 43210</span></p>
+      <button onclick="orderWhatsAppGeneral()" class="mt-4 w-full bg-[#25D366] hover:bg-[#1eb856] text-white font-bold py-3 rounded-xl">Chat on WhatsApp →</button>
+    </div>
+    <div class="bg-white/10 rounded-2xl p-5 mt-4">
+      <p class="font-bold flex items-center gap-2">📸 Instagram</p><p class="text-sm text-white/70 mt-1">Handle: <span id="contactIG" class="font-bold text-white">@pathaayam.spices</span></p>
+      <div class="flex gap-2 mt-4"><button onclick="copyText(socials.instagram||'@pathaayam.spices','Instagram handle copied! DM us to order 📸')" class="flex-1 bg-white text-brand-900 font-bold py-3 rounded-xl">Copy Handle</button><button onclick="openInstagram()" class="flex-1 border border-white/40 font-bold py-3 rounded-xl">Open Instagram →</button></div>
+    </div>
+    <p class="text-xs text-white/50 mt-5 text-center">Mon–Sat • 9 AM – 8 PM • Idukki, Kerala</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#052e22] text-white pt-12 pb-6">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-4 gap-8">
+    <div><p class="font-display text-2xl font-bold">Pathaayam</p><p class="text-sm text-white/60 mt-2 leading-relaxed">Authentic, farm-fresh spices from Idukki, Kerala — straight to your kitchen.</p><p class="mt-4 text-sm">📍 Idukki, Kerala, India</p></div>
+    <div><p class="font-bold mb-3">Shop</p><ul id="footerCats" class="space-y-2 text-sm text-white/60"></ul></div>
+    <div><p class="font-bold mb-3">Help</p><ul class="space-y-2 text-sm text-white/60"><li>Shipping & Delivery</li><li>Bulk / Wholesale Enquiry</li><li>Track Your Order</li></ul></div>
+    <div><p class="font-bold mb-3">Admin</p><button onclick="openAdminLogin()" class="bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-full text-sm font-bold">🔒 Admin Dashboard</button><p class="text-xs text-white/40 mt-3">Powered by Firebase</p></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 md:px-6 mt-10 pt-5 border-t border-white/10 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/50"><p>© 2026 Pathaayam. All rights reserved. Made with 🌿 in Kerala.</p><p>Firebase: liveno-f76fe-default-rtdb.firebaseio.com/pathaayam/pathayam</p></div>
+</footer>
+
+<!-- CART DRAWER -->
+<div id="cartOverlay" onclick="toggleCart(false)" class="hidden fixed inset-0 bg-black/50 z-50"></div>
+<aside id="cartDrawer" class="drawer fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 translate-x-full flex flex-col shadow-2xl">
+  <div class="p-5 border-b flex justify-between items-center"><div><h3 class="font-display text-2xl font-bold text-brand-900">Your Basket</h3><p class="text-xs text-slate-500">Review & order in one tap</p></div><button onclick="toggleCart(false)" class="w-10 h-10 rounded-full bg-slate-100">✕</button></div>
+  <div id="cartItems" class="flex-1 overflow-y-auto p-5 space-y-3"></div>
+  <div class="p-5 border-t bg-green-50">
+    <div class="flex justify-between font-bold text-lg"><span>Total</span><span id="cartTotal">₹0</span></div>
+    <p id="freeShipMsg" class="text-xs text-brand-700 font-semibold mt-1"></p>
+    <button onclick="checkoutWhatsApp()" class="w-full mt-4 bg-[#25D366] text-white font-bold py-4 rounded-full">💬 Checkout on WhatsApp</button>
+    <button onclick="checkoutInstagram()" class="w-full mt-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3.5 rounded-full">📸 Checkout on Instagram</button>
+  </div>
+</aside>
+
+<!-- BUY MODAL -->
+<div id="buyModal" class="hidden fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4">
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeBuy()"></div>
+  <div class="relative bg-white w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-t-[28px] md:rounded-[28px] grid md:grid-cols-2">
+    <div class="relative"><img id="buyImg" class="w-full h-64 md:h-full object-cover"/><span id="buyBadge" class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1.5 rounded-full"></span></div>
+    <div class="p-6 md:p-7">
+      <div class="flex justify-between"><div><p id="buyCat" class="text-xs font-bold tracking-widest text-brand-700"></p><h3 id="buyName" class="font-display text-3xl font-bold text-brand-900 mt-1"></h3></div><button onclick="closeBuy()" class="w-9 h-9 bg-slate-100 rounded-full shrink-0">✕</button></div>
+      <p class="text-amber-500 mt-2">★★★★★ <span class="text-slate-500 text-sm font-semibold">4.9 • Farm Fresh</span></p>
+      <p id="buyDesc" class="text-slate-600 text-sm leading-relaxed mt-3"></p>
+      <p class="font-bold text-sm mt-5 mb-2">Select Weight</p><div id="buyWeights" class="flex flex-wrap gap-2"></div>
+      <div class="flex items-center justify-between mt-5 bg-green-50 rounded-2xl p-4"><div><p class="text-xs font-bold text-slate-500">TOTAL PRICE</p><p id="buyPrice" class="font-display text-3xl font-bold text-brand-900">₹0</p></div>
+      <div class="flex items-center gap-3 bg-white rounded-full p-1 border"><button onclick="changeBuyQty(-1)" class="w-9 h-9 rounded-full bg-slate-100 font-bold">−</button><span id="buyQty" class="font-bold w-6 text-center">1</span><button onclick="changeBuyQty(1)" class="w-9 h-9 rounded-full bg-brand-700 text-white font-bold">+</button></div></div>
+      <div class="space-y-2 mt-5">
+        <input id="custName" placeholder="Your Name *" class="w-full border rounded-xl px-4 py-3 font-medium"/>
+        <input id="custPhone" placeholder="Phone / WhatsApp Number *" class="w-full border rounded-xl px-4 py-3 font-medium"/>
+        <textarea id="custAddr" rows="2" placeholder="Delivery Address (House, Street, City, PIN) *" class="w-full border rounded-xl px-4 py-3 font-medium"></textarea>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mt-5">
+        <button onclick="orderBuy('whatsapp')" class="bg-[#25D366] text-white font-bold py-4 rounded-full">💬 WhatsApp Order</button>
+        <button onclick="orderBuy('instagram')" class="bg-brand-900 text-white font-bold py-4 rounded-full">📸 Instagram Order</button>
+      </div>
+      <button onclick="addBuyToCart()" class="w-full mt-3 border-2 border-brand-700 text-brand-800 font-bold py-3.5 rounded-full hover:bg-green-50">🛒 Add to Basket</button>
+      <p class="text-[11px] text-center text-slate-400 mt-3">Order details are pre-filled. Just press send on WhatsApp / DM on Instagram.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN LOGIN -->
+<div id="loginModal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4">
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeLogin()"></div>
+  <div class="relative bg-white rounded-[28px] w-full max-w-md p-7 shadow-2xl">
+    <div class="w-14 h-14 bg-brand-900 text-white rounded-2xl grid place-items-center text-2xl mx-auto">🔒</div>
+    <h3 class="font-display text-3xl font-bold text-center text-brand-900 mt-4">Admin Login</h3><p class="text-center text-sm text-slate-500 mt-1">Pathaayam Control Panel</p>
+    <div class="bg-green-50 border border-green-100 rounded-xl p-3 text-xs mt-5 text-center font-semibold text-brand-800">Enter your credentials to access the admin dashboard</div>
+    <div class="space-y-3 mt-5">
+      <input id="loginUser" placeholder="Username" class="w-full border rounded-xl px-4 py-3.5 font-medium"/>
+      <input id="loginPass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()" class="w-full border rounded-xl px-4 py-3.5 font-medium"/>
+    </div>
+    <p id="loginError" class="hidden text-red-600 text-sm font-semibold text-center mt-3"></p>
+    <button id="loginBtn" onclick="doLogin()" class="w-full bg-brand-700 text-white font-bold py-4 rounded-full mt-5">Login to Dashboard →</button>
+    <button onclick="closeLogin()" class="w-full py-2 text-sm font-semibold text-slate-500">Cancel</button>
+  </div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="adminModal" class="hidden fixed inset-0 z-[70] bg-[#f3f7f4] overflow-y-auto">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-5">
+    <div class="bg-brand-900 text-white rounded-[24px] p-5 md:p-6 flex flex-col lg:flex-row justify-between gap-4 lg:items-center shadow-soft">
+      <div class="flex items-center gap-4"><div class="w-12 h-12 bg-white text-brand-900 rounded-2xl grid place-items-center text-xl font-bold">P</div><div><h3 class="font-display text-2xl md:text-3xl font-bold">Pathaayam Admin Dashboard</h3><p class="text-xs text-white/60">Live Firebase Realtime Database • <span class="break-all">https://liveno-f76fe-default-rtdb.firebaseio.com/pathaayam/pathayam</span></p></div></div>
+      <div class="flex flex-wrap items-center gap-3">
+        <span id="syncBadge" class="flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-xs font-bold"><span id="syncDot" class="w-2.5 h-2.5 rounded-full bg-green-400 pulse-dot"></span><span id="syncText">Synced with Firebase</span></span>
+        <button onclick="closeAdmin()" class="bg-white text-brand-900 px-5 py-2.5 rounded-full font-bold text-sm">View Storefront</button>
+        <button onclick="logoutAdmin()" class="bg-red-500 px-5 py-2.5 rounded-full font-bold text-sm">Logout</button>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mt-6">
+      <button onclick="switchAdminTab('products')" id="tab-products" class="admin-tab bg-brand-700 text-white px-5 py-3 rounded-full font-bold text-sm">📦 Products</button>
+      <button onclick="switchAdminTab('cats')" id="tab-cats" class="admin-tab bg-white px-5 py-3 rounded-full font-bold text-sm border">🗂 Categories</button>
+      <button onclick="switchAdminTab('text')" id="tab-text" class="admin-tab bg-white px-5 py-3 rounded-full font-bold text-sm border">✏️ Website Text</button>
+      <button onclick="switchAdminTab('social')" id="tab-social" class="admin-tab bg-white px-5 py-3 rounded-full font-bold text-sm border">🔗 Social Contacts</button>
+      <button onclick="switchAdminTab('sync')" id="tab-sync" class="admin-tab bg-white px-5 py-3 rounded-full font-bold text-sm border">☁️ Sync & Data</button>
+    </div>
+
+    <!-- PRODUCTS TAB -->
+    <div id="panel-products" class="admin-panel mt-6">
+      <div class="grid lg:grid-cols-5 gap-6">
+        <div class="lg:col-span-3 bg-white rounded-[24px] border p-5">
+          <div class="flex justify-between items-center"><h4 class="font-bold text-lg">All Products <span id="adminProdCount" class="bg-green-100 text-brand-800 text-xs px-2 py-1 rounded-full"></span></h4><button onclick="resetProductForm()" class="text-sm font-bold text-brand-700">+ New Product</button></div>
+          <div id="adminProductList" class="mt-4 space-y-3 max-h-[620px] overflow-y-auto pr-1"></div>
+        </div>
+        <div class="lg:col-span-2 bg-white rounded-[24px] border p-5 h-fit">
+          <h4 id="formTitle" class="font-bold text-lg">Add New Product</h4>
+          <input type="hidden" id="editId"/>
+          <div class="space-y-3 mt-4">
+            <input id="fName" placeholder="Product Name e.g. Idukki Cardamom" class="w-full border rounded-xl px-4 py-3"/>
+            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-3 mb-3">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" id="fAddNoCat" onchange="toggleCategoryMode()" class="w-5 h-5 rounded"/>
+                <div>
+                  <p class="font-bold text-sm text-blue-900">Add without category?</p>
+                  <p class="text-xs text-blue-700">Check this to skip category • Uncheck to choose a category</p>
+                </div>
+              </label>
+            </div>
+            <div id="categorySection" class="space-y-2">
+              <label class="text-xs font-bold text-slate-500">CATEGORY — required *</label>
+              <p class="text-xs text-slate-500 mb-2">Choose a category or create a new one:</p>
+              <div class="grid grid-cols-2 gap-2 mt-1">
+                <select id="fCatSelect" onchange="onCatSelectChange()" class="border rounded-xl px-3 py-3 bg-white">
+                  <option value="">-- Select Category --</option>
+                </select>
+                <input id="fBadge" placeholder="Badge e.g. Bestseller" class="border rounded-xl px-4 py-3"/>
+              </div>
+              <input id="fCatNew" placeholder="Name your new category e.g. Herbal Teas" class="hidden w-full border rounded-xl px-4 py-3 mt-2 border-brand-600"/>
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-500">STOCK STATUS</label>
+              <select id="fStock" class="w-full border rounded-xl px-4 py-3 mt-1 bg-white">
+                <option value="in-stock" selected>✅ In Stock</option>
+                <option value="out-of-stock">❌ Out of Stock</option>
+              </select>
+            </div>
+            <textarea id="fDesc" rows="3" placeholder="Description..." class="w-full border rounded-xl px-4 py-3"></textarea>
+            <input id="fImg" placeholder="Image URL (https://...)" class="w-full border rounded-xl px-4 py-3"/>
+            <div class="bg-green-50 border border-green-100 rounded-2xl p-4">
+              <div class="flex justify-between items-center"><p class="font-bold text-sm">Weight Tiers <span class="text-xs font-normal text-slate-500">(array structure — Firebase-safe)</span></p><button type="button" onclick="addWeightRow()" class="bg-brand-700 text-white text-xs font-bold px-3 py-1.5 rounded-full">+ Add</button></div>
+              <div id="weightRows" class="space-y-2 mt-3"></div>
+              <p class="text-[11px] text-slate-500 mt-2">Stored as <code class="bg-white px-1 rounded">weights: [{label:"1.5kg", price:2800}]</code> — no dots in keys.</p>
+            </div>
+            <button id="saveProdBtn" onclick="saveProduct()" class="w-full bg-brand-700 text-white font-bold py-4 rounded-full">💾 Save Product to Firebase</button>
+            <button onclick="resetProductForm()" class="w-full py-2 text-sm font-semibold text-slate-500">Cancel Editing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIES TAB -->
+    <div id="panel-cats" class="admin-panel hidden mt-6">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div class="bg-white rounded-[24px] border p-6">
+          <h4 class="font-bold text-lg">🗂 Add New Category</h4>
+          <p class="text-sm text-slate-500 mt-1">New categories are stored at <code class="bg-green-50 px-1 rounded">/pathaayam/pathayam/categories</code> in Firebase and appear instantly on the storefront.</p>
+          <div class="flex gap-2 mt-4">
+            <input id="newCatName" placeholder="Category name e.g. Herbal Teas" onkeydown="if(event.key==='Enter')addCategory()" class="flex-1 border rounded-xl px-4 py-3.5"/>
+            <button id="addCatBtn" onclick="addCategory()" class="bg-brand-700 text-white font-bold px-6 py-3.5 rounded-xl">+ Add Category</button>
+          </div>
+          <div class="bg-green-50 border border-green-100 rounded-2xl p-4 mt-5">
+            <p class="font-bold text-sm">💡 How categories work</p>
+            <ul class="text-xs text-slate-600 mt-2 space-y-1 list-disc pl-4">
+              <li>Every category is a filter pill on the storefront shop grid.</li>
+              <li>When adding/editing a product you can <b>join an existing category</b> or pick <b>"➕ Create new category…"</b> — it is created & synced automatically.</li>
+              <li>Categories with 0 products can be safely deleted.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg-white rounded-[24px] border p-6">
+          <div class="flex justify-between items-center"><h4 class="font-bold text-lg">All Categories <span id="adminCatCount" class="bg-green-100 text-brand-800 text-xs px-2 py-1 rounded-full"></span></h4><button onclick="syncCategories()" class="text-sm font-bold text-brand-700">↻ Sync Now</button></div>
+          <div id="adminCategoryList" class="mt-4 space-y-2 max-h-[480px] overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEXT TAB -->
+    <div id="panel-text" class="admin-panel hidden mt-6">
+      <div class="bg-white rounded-[24px] border p-6 max-w-3xl">
+        <h4 class="font-bold text-lg">✏️ Live Hero Text Editor</h4><p class="text-sm text-slate-500">Changes sync globally via Firebase PUT /settings</p>
+        <div class="space-y-4 mt-5">
+          <div><label class="text-xs font-bold text-slate-500">MAIN HEADLINE</label><input id="sHeadline" class="w-full border rounded-xl px-4 py-3 mt-1"/></div>
+          <div><label class="text-xs font-bold text-slate-500">SUB HEADLINE</label><input id="sSub" class="w-full border rounded-xl px-4 py-3 mt-1"/></div>
+          <div><label class="text-xs font-bold text-slate-500">INTRODUCTION</label><textarea id="sIntro" rows="4" class="w-full border rounded-xl px-4 py-3 mt-1"></textarea></div>
+          <div><label class="text-xs font-bold text-slate-500">ANNOUNCEMENT BAR</label><input id="sAnnounce" class="w-full border rounded-xl px-4 py-3 mt-1"/></div>
+          <button id="saveTextBtn" onclick="saveSettings()" class="bg-brand-700 text-white font-bold px-8 py-4 rounded-full">💾 Save & Sync to Cloud</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOCIAL TAB -->
+    <div id="panel-social" class="admin-panel hidden mt-6">
+      <div class="bg-white rounded-[24px] border p-6 max-w-3xl">
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+          <div>
+            <h4 class="font-bold text-lg">🔗 Social Contact Configuration</h4>
+            <p class="text-sm text-slate-500 mt-1">WhatsApp number & Instagram handle used for ALL order links across the site.</p>
+          </div>
+          <span class="flex items-center gap-2 bg-green-50 border border-green-100 px-4 py-2 rounded-full text-xs font-bold text-brand-800"><span class="w-2 h-2 rounded-full bg-brand-500 pulse-dot"></span> Direct-linked to Firebase</span>
+        </div>
+        <div class="bg-brand-900 text-white rounded-2xl p-4 mt-4 text-xs font-mono break-all">
+          READ ▸ GET&nbsp;&nbsp;…/pathaayam/pathayam/socials.json &nbsp;•&nbsp; WRITE ▸ PUT&nbsp;&nbsp;…/pathaayam/pathayam/socials.json
+        </div>
+        <div class="space-y-4 mt-5">
+          <div><label class="text-xs font-bold text-slate-500">WHATSAPP NUMBER (with country code, digits only)</label><input id="sWhats" placeholder="919876543210" class="w-full border rounded-xl px-4 py-3 mt-1"/><p class="text-xs text-slate-400 mt-1">Used as wa.me/&lt;number&gt; — e.g. wa.me/919876543210</p></div>
+          <div><label class="text-xs font-bold text-slate-500">INSTAGRAM HANDLE</label><input id="sInsta" placeholder="@pathaayam.spices" class="w-full border rounded-xl px-4 py-3 mt-1"/></div>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <button id="saveSocialBtn" onclick="saveSocials()" class="bg-[#25D366] text-white font-bold px-8 py-4 rounded-full">💾 Save Socials & Sync</button>
+            <button onclick="testSocialLinks()" class="border-2 border-brand-700 text-brand-800 font-bold px-8 py-4 rounded-full">🧪 Test Links (opens WhatsApp)</button>
+          </div>
+          <p class="text-xs text-slate-400">Saving performs a Firebase PUT and then a verification GET — the status badge below confirms the cloud value.</p>
+          <div id="socialSyncStatus" class="rounded-xl px-4 py-3 text-sm font-bold bg-slate-100 text-slate-600">Social link status: checking…</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SYNC TAB -->
+    <div id="panel-sync" class="admin-panel hidden mt-6">
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-white rounded-[24px] border p-6"><p class="text-3xl">☁️</p><h4 class="font-bold mt-2">Firebase Endpoint</h4><p class="text-xs break-all text-slate-500 mt-1">https://liveno-f76fe-default-rtdb.firebaseio.com/pathaayam/pathayam</p><p class="text-xs mt-3"><b>Nodes:</b> /products • /categories • /settings • /socials • /admin</p></div>
+        <div class="bg-white rounded-[24px] border p-6"><p class="text-3xl">🔄</p><h4 class="font-bold mt-2">Manual Re-Sync</h4><p class="text-sm text-slate-500 mt-1">Reload latest data from Firebase</p><button onclick="loadFromFirebase(true)" class="mt-3 bg-brand-700 text-white font-bold px-5 py-2.5 rounded-full text-sm">↻ Reload from Cloud</button></div>
+        <div class="bg-white rounded-[24px] border p-6"><p class="text-3xl">⚠️</p><h4 class="font-bold mt-2">Reset Data</h4><p class="text-sm text-slate-500 mt-1">Overwrite Firebase with default Pathaayam catalogue</p><button onclick="resetToDefaults()" class="mt-3 bg-red-500 text-white font-bold px-5 py-2.5 rounded-full text-sm">Reset to Defaults</button></div>
+      </div>
+      <div class="bg-white rounded-[24px] border p-6 mt-5"><h4 class="font-bold">Raw Firebase Preview</h4><pre id="rawPreview" class="bg-slate-900 text-green-300 text-xs p-4 rounded-2xl mt-3 overflow-auto max-h-72"></pre></div>
+    </div>
+  </div>
+</div>
+
+<div id="toastWrap" class="fixed bottom-5 right-5 z-[90] space-y-2"></div>
+
+<script>
+// ============ PATHAAYAM — Firebase Config with pathayam subpath ============
+const DB_BASE = "https://liveno-f76fe-default-rtdb.firebaseio.com/pathaayam/pathayam";
+const IMG_FALLBACK = "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80&auto=format&fit=crop";
+
+const DEFAULT_SETTINGS = {
+  headline: "Real Spice. Real Idukki. Real Pathaayam.",
+  subheadline: "From the misty cardamom hills of Kerala to your kitchen.",
+  intro: "Hand-picked, sun-dried and small-batch packed spices sourced directly from Idukki farmers. No middlemen, no preservatives — just pure, aromatic spice the way nature intended.",
+  announcement: "FREE DELIVERY ACROSS INDIA ON ORDERS ABOVE ₹999 • FARM-FRESH FROM IDUKKI, KERALA"
+};
+
+const DEFAULT_SOCIALS = { whatsapp: "919876543210", instagram: "@pathaayam.spices" };
+const DEFAULT_CATEGORIES = ["Whole Spices","Powders","Blends","Kits"];
+
+const DEFAULT_PRODUCTS = [
+  {id:"p1",name:"Idukki Green Cardamom",cat:"Whole Spices",badge:"Bestseller",desc:"Extra-bold 8mm green cardamom from Idukki high ranges. Intense aroma, perfect for payasam, biryani & chai.",img:"https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80",weights:[{label:"250g",price:750},{label:"500g",price:1450},{label:"1.5kg",price:2800}]},
+  {id:"p2",name:"Malabar Black Pepper",cat:"Whole Spices",badge:"Farm Fresh",desc:"Bold, pungent Malabar pepper berries with high piperine content. Sun-dried & hand-cleaned.",img:"https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=800&q=80",weights:[{label:"250g",price:350},{label:"500g",price:680},{label:"1kg",price:1300}]},
+  {id:"p3",name:"Idukki Cloves",cat:"Whole Spices",badge:"",desc:"Deep brown, oil-rich cloves with strong aroma. Ideal for garam masala, curries & desserts.",img:"https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",weights:[{label:"100g",price:320},{label:"250g",price:760},{label:"500g",price:1450}]},
+  {id:"p4",name:"Cinnamon Quills",cat:"Whole Spices",badge:"Premium",desc:"Soft, fragrant Ceylon-type cinnamon quills from Idukki. Sweet, warm & perfect for baking.",img:"https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80",weights:[{label:"250g",price:420},{label:"500g",price:800},{label:"1kg",price:1550}]},
+  {id:"p5",name:"Idukki Turmeric Fingers",cat:"Powders",badge:"High Curcumin",desc:"Polished turmeric fingers with rich curcumin & golden colour. Grind fresh at home for best results.",img:"https://images.unsplash.com/photo-1615485500834-bc10199bc727?w=800&q=80",weights:[{label:"500g",price:450},{label:"1kg",price:850},{label:"2kg",price:1600}]},
+  {id:"p6",name:"Dry Ginger",cat:"Whole Spices",badge:"",desc:"Sun-dried ginger slices with warm, spicy flavour. Great for tea, ayurveda & cooking.",img:"https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=80",weights:[{label:"500g",price:380},{label:"1kg",price:720}]},
+  {id:"p7",name:"Pathaayam Garam Masala",cat:"Blends",badge:"House Blend",desc:"Our signature 12-spice blend — cardamom, pepper, cloves, cinnamon & more. Freshly ground.",img:"https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80",weights:[{label:"100g",price:220},{label:"250g",price:520},{label:"500g",price:980}]},
+  {id:"p8",name:"Star Anise & Bay Combo",cat:"Blends",badge:"",desc:"Aromatic star anise with bay leaves — the secret behind restaurant-style biryani & curries.",img:"https://images.unsplash.com/photo-1506368249639-73a05d6f6488?w=800&q=80",weights:[{label:"100g",price:280},{label:"250g",price:650}]},
+  {id:"p9",name:"Idukki Family Spice Kit",cat:"Kits",badge:"Value Pack",desc:"Complete kitchen kit: cardamom, pepper, cloves, cinnamon, turmeric & garam masala in one box.",img:"https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",weights:[{label:"Kit (6 items)",price:1499},{label:"Kit + 1.5kg Cardamom",price:3800}]}
+];
+
+// ============ State ============
+let products = [...DEFAULT_PRODUCTS];
+let settings = {...DEFAULT_SETTINGS};
+let socials = {...DEFAULT_SOCIALS};
+let categories = [...DEFAULT_CATEGORIES];
+let cart = JSON.parse(localStorage.getItem('pathaayam_cart')||'[]');
+let activeCategory = "All";
+let selectedWeight = {};
+let buyState = {product:null, weightIdx:0, qty:1};
+let isAdmin = false;
+let firebaseOnline = true;
+
+// ============ Helpers ============
+const $ = id => document.getElementById(id);
+const money = n => "₹" + Number(n||0).toLocaleString('en-IN');
+function normalizeArray(val){
+  if(Array.isArray(val)) return val.filter(Boolean);
+  if(val && typeof val==='object') return Object.keys(val).sort((a,b)=>{const na=parseInt(a),nb=parseInt(b); return (isNaN(na)||isNaN(nb))?a.localeCompare(b):na-nb}).map(k=>val[k]).filter(Boolean);
+  return [];
+}
+function normalizeProducts(raw){
+  const arr = normalizeArray(raw);
+  return arr.map(p=>({...p, weights: normalizeArray(p.weights).map(w=>({label:w.label||'250g', price:Number(w.price)||0}))}));
+}
+function normalizeCategories(raw){
+  const arr = normalizeArray(raw).map(c => typeof c === 'string' ? c : (c && c.name) || '').map(s=>s.trim()).filter(Boolean);
+  return [...new Set(arr)];
+}
+function toast(msg, ok=true){
+  const t=document.createElement('div');
+  t.className=`toast ${ok?'bg-brand-900':'bg-red-600'} text-white font-bold text-sm px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-2 max-w-sm`;
+  t.innerHTML=`<span>${ok?'✅':'⚠️'}</span> ${msg}`;
+  $('toastWrap').appendChild(t); setTimeout(()=>{t.style.opacity='0'; setTimeout(()=>t.remove(),300)},3200);
+}
+function copyText(text, msg){
+  navigator.clipboard.writeText(text).then(()=>toast(msg||'Copied!')).catch(()=>toast('Copied: '+text));
+}
+function setSync(status){
+  const dot=$('syncDot'), txt=$('syncText'), pubDot=$('publicSyncDot'), pubTxt=$('publicSyncText');
+  if(status==='saving'){ dot.className='w-2.5 h-2.5 rounded-full bg-amber-400 pulse-dot'; txt.textContent='Saving to Cloud...'; if(pubDot){pubDot.className='w-2 h-2 rounded-full bg-amber-400 pulse-dot'; pubTxt.textContent='Saving...';} }
+  else if(status==='synced'){ dot.className='w-2.5 h-2.5 rounded-full bg-green-400 pulse-dot'; txt.textContent='Synced with Firebase'; if(pubDot){pubDot.className='w-2 h-2 rounded-full bg-brand-500 pulse-dot'; pubTxt.textContent='Live Cloud Sync';} }
+  else { dot.className='w-2.5 h-2.5 rounded-full bg-red-400'; txt.textContent='Sync Error — Offline Demo Mode'; if(pubDot){pubDot.className='w-2 h-2 rounded-full bg-red-400'; pubTxt.textContent='Offline Demo';} }
+}
+
+// ============ Firebase API (async fetch PUT/GET) ============
+async function dbGet(path){
+  const res = await fetch(`${DB_BASE}/${path}.json`);
+  if(!res.ok) throw new Error('GET failed '+res.status);
+  return await res.json();
+}
+async function dbPut(path, data){
+  const res = await fetch(`${DB_BASE}/${path}.json`, {method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data)});
+  if(!res.ok) throw new Error('PUT failed '+res.status);
+  return await res.json();
+}
+
+async function loadFromFirebase(manual=false){
+  setSync('saving');
+  try{
+    const [prodRaw, catRaw, settingsRaw, socialsRaw, adminRaw] = await Promise.all([
+      dbGet('products').catch(()=>null),
+      dbGet('categories').catch(()=>null),
+      dbGet('settings').catch(()=>null),
+      dbGet('socials').catch(()=>null),
+      dbGet('admin').catch(()=>null)
+    ]);
+    // Auto-initialize admin if empty
+    if(!adminRaw){
+      await dbPut('admin', {username:'admin', password:'5787'});
+    }
+    // Initialize products if empty
+    if(!prodRaw || normalizeArray(prodRaw).length===0){
+      await dbPut('products', DEFAULT_PRODUCTS);
+      products = [...DEFAULT_PRODUCTS];
+    } else {
+      products = normalizeProducts(prodRaw);
+    }
+    // Initialize categories if empty
+    if(!catRaw || normalizeCategories(catRaw).length===0){
+      const derived = [...new Set([...DEFAULT_CATEGORIES, ...products.map(p=>p.cat).filter(Boolean)])];
+      await dbPut('categories', derived);
+      categories = derived;
+    } else {
+      categories = normalizeCategories(catRaw);
+    }
+    // Merge any product categories missing from the list
+    const missing = products.map(p=>p.cat).filter(Boolean).filter(c=>!categories.includes(c));
+    if(missing.length){ categories = [...categories, ...missing]; await dbPut('categories', categories); }
+    // Initialize settings if empty
+    if(!settingsRaw){
+      await dbPut('settings', DEFAULT_SETTINGS);
+      settings = {...DEFAULT_SETTINGS};
+    } else {
+      const {whatsapp, instagram, ...textOnly} = settingsRaw;
+      settings = {...DEFAULT_SETTINGS, ...textOnly};
+    }
+    // SOCIALS — dedicated node
+    if(!socialsRaw){
+      const legacyWa = settingsRaw && settingsRaw.whatsapp ? String(settingsRaw.whatsapp) : DEFAULT_SOCIALS.whatsapp;
+      const legacyIg = settingsRaw && settingsRaw.instagram ? settingsRaw.instagram : DEFAULT_SOCIALS.instagram;
+      await dbPut('socials', {whatsapp: legacyWa.replace(/\D/g,'')||DEFAULT_SOCIALS.whatsapp, instagram: legacyIg});
+      socials = {whatsapp: legacyWa.replace(/\D/g,'')||DEFAULT_SOCIALS.whatsapp, instagram: legacyIg};
+    } else {
+      socials = {...DEFAULT_SOCIALS, ...socialsRaw};
+      socials.whatsapp = String(socials.whatsapp||'').replace(/\D/g,'') || DEFAULT_SOCIALS.whatsapp;
+    }
+    firebaseOnline=true; setSync('synced');
+    refreshAllUI();
+    updateSocialStatus('✅ Linked to Firebase — socials load & save at /pathaayam/pathayam/socials', 'bg-green-50 text-brand-800 border border-green-100');
+    if(manual) toast('Reloaded latest data from Firebase ☁️');
+  }catch(e){
+    console.warn(e);
+    firebaseOnline=false; setSync('error');
+    refreshAllUI();
+    updateSocialStatus('⚠️ Offline demo mode — socials saved locally only', 'bg-red-50 text-red-700 border border-red-100');
+    if(manual) toast('Firebase unreachable — showing local demo data', false);
+  }
+}
+function refreshAllUI(){
+  applySettings(); renderCategories(); renderProducts(); renderAdminList(); renderAdminCategories(); renderCatOptions(); fillSettingsForm(); updateRawPreview(); renderFooterCats();
+}
+
+// ============ Apply Settings & Socials to UI ============
+function applySettings(){
+  $('heroHeadline').textContent = settings.headline || DEFAULT_SETTINGS.headline;
+  $('heroSub').textContent = settings.subheadline || '';
+  $('heroIntro').textContent = settings.intro || '';
+  const wa = (socials.whatsapp||'').replace(/\D/g,'');
+  $('contactWA').textContent = wa ? '+'+wa : '+91 98765 43210';
+  $('contactIG').textContent = socials.instagram || '@pathaayam.spices';
+}
+function waNumber(){ return (socials.whatsapp||'919876543210').replace(/\D/g,'') || '919876543210'; }
+function igHandle(){ return (socials.instagram||'@pathaayam.spices').replace('@','').trim(); }
+function updateSocialStatus(msg, cls){
+  const el=$('socialSyncStatus'); if(!el) return;
+  el.textContent = 'Social link status: ' + msg;
+  el.className = 'rounded-xl px-4 py-3 text-sm font-bold ' + cls;
+}
+
+// ============ Categories ============
+function renderCategories(){
+  // "All" always shows all products
+  // Secondary categories show only products assigned to them
+  const cats = ["All", ...categories.filter(c => products.some(p=>p.cat===c))];
+  $('categoryPills').innerHTML = cats.map(c=>{
+    let count;
+    if(c === 'All') count = products.length;
+    else count = products.filter(p=>p.cat===c).length;
+
+    return `<button onclick="setCategory('${c.replace(/'/g,"\\'")}')" class="px-5 py-2.5 rounded-full font-bold text-sm border transition ${activeCategory===c?'bg-brand-700 text-white border-brand-700':'bg-white hover:bg-green-50'}">${c} <span class="opacity-60 text-xs">(${count})</span></button>`;
+  }).join('');
+}
+function setCategory(c){
+  activeCategory=c;
+  renderCategories();
+  renderProducts();
+}
+function renderFooterCats(){
+  $('footerCats').innerHTML = categories.slice(0,5).map(c=>`<li><a href="#shop" onclick="setCategory('${c.replace(/'/g,"\\'")}')">${c}</a></li>`).join('');
+}
+async function syncCategories(){
+  setSync('saving');
+  try{ await dbPut('categories', categories); setSync('synced'); toast('Categories synced to Firebase ☁️'); }
+  catch(e){ setSync('error'); toast('Categories saved locally — sync failed', false); }
+  renderCategories(); renderAdminCategories(); renderCatOptions(); updateRawPreview();
+}
+async function addCategory(){
+  const name = $('newCatName').value.trim();
+  if(!name) return toast('Enter a category name first', false);
+  if(categories.some(c=>c.toLowerCase()===name.toLowerCase())) return toast('Category already exists', false);
+  const btn=$('addCatBtn'); btn.textContent='Syncing… ⏳'; btn.disabled=true; setSync('saving');
+  categories.push(name);
+  try{ await dbPut('categories', categories); setSync('synced'); toast(`Category "${name}" created & synced ☁️`); }
+  catch(e){ setSync('error'); toast(`Category "${name}" saved locally — sync failed`, false); }
+  $('newCatName').value='';
+  btn.textContent='+ Add Category'; btn.disabled=false;
+  renderCategories(); renderAdminCategories(); renderCatOptions(); renderFooterCats(); updateRawPreview();
+}
+async function renameCategory(oldName){
+  const name = prompt('Rename category:', oldName);
+  if(!name || name.trim()===oldName) return;
+  const newName = name.trim();
+  if(categories.includes(newName)) return toast('That category name already exists', false);
+  setSync('saving');
+  categories = categories.map(c=>c===oldName?newName:c);
+  products = products.map(p=>p.cat===oldName?{...p, cat:newName}:p);
+  try{
+    await dbPut('categories', categories); await dbPut('products', products);
+    setSync('synced'); toast('Category renamed & synced ☁️');
+  }catch(e){ setSync('error'); toast('Renamed locally — sync failed', false); }
+  if(activeCategory===oldName) activeCategory=newName;
+  refreshAllUI();
+}
+async function deleteCategory(cat){
+  const count = products.filter(p=>p.cat===cat).length;
+  if(count>0) return toast(`"${cat}" has ${count} product(s). Move them to another category first.`, false);
+  if(!confirm(`Delete empty category "${cat}"? This will sync to Firebase.`)) return;
+  setSync('saving');
+  categories = categories.filter(c=>c!==cat);
+  if(activeCategory===cat) activeCategory='All';
+  try{ await dbPut('categories', categories); setSync('synced'); toast('Category deleted & synced'); }
+  catch(e){ setSync('error'); toast('Deleted locally — sync failed', false); }
+  renderCategories(); renderAdminCategories(); renderCatOptions(); renderFooterCats(); updateRawPreview(); renderProducts();
+}
+
+// ============ Product Grid ============
+function showSkeletons(){
+  $('productGrid').innerHTML = Array(8).fill(0).map(()=>`<div class="bg-white rounded-[24px] border overflow-hidden"><div class="shimmer h-52"></div><div class="p-5 space-y-3"><div class="shimmer h-5 rounded w-3/4"></div><div class="shimmer h-4 rounded w-1/2"></div><div class="shimmer h-10 rounded-full"></div></div></div>`).join('');
+}
+
+function renderProducts(){
+  const q = ($('searchInput').value||'').toLowerCase().trim();
+  const sort = $('sortSelect').value;
+  let list = products.filter(p=> {
+    let categoryMatch = false;
+    if(activeCategory === 'All') categoryMatch = true;
+    else categoryMatch = p.cat === activeCategory;
+
+    return categoryMatch && (p.name.toLowerCase().includes(q)||(p.desc||'').toLowerCase().includes(q));
+  });
+
+  if(sort==='low') list=[...list].sort((a,b)=>(a.weights[0]?.price||0)-(b.weights[0]?.price||0));
+  if(sort==='high') list=[...list].sort((a,b)=>(b.weights[0]?.price||0)-(a.weights[0]?.price||0));
+  if(sort==='name') list=[...list].sort((a,b)=>a.name.localeCompare(b.name));
+
+  $('noResult').classList.toggle('hidden', list.length>0);
+  $('productGrid').innerHTML = list.map(p=>{
+    const wi = selectedWeight[p.id]||0;
+    const w = p.weights[wi]||p.weights[0]||{label:'—',price:0};
+    const isOutOfStock = p.stock === 'out-of-stock';
+    const stockBadge = isOutOfStock ? '❌ Out of Stock' : '✅ In Stock';
+
+    return `<article class="bg-white rounded-[24px] border border-green-50 overflow-hidden card-hover flex flex-col ${isOutOfStock ? 'opacity-60' : ''}">
+      <div class="relative overflow-hidden">
+        <img src="${p.img||IMG_FALLBACK}" onerror="this.src='${IMG_FALLBACK}'" class="w-full h-52 object-cover hover:scale-105 transition duration-500 ${isOutOfStock ? 'grayscale' : ''}" alt="${p.name}"/>
+        ${p.badge?`<span class="absolute top-3 left-3 bg-brand-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow">${p.badge}</span>`:''}
+        <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-[11px] font-bold px-2.5 py-1.5 rounded-full">${stockBadge}</span>
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <p class="text-[11px] font-bold tracking-widest text-brand-700">${p.cat || 'ALL'}</p>
+        <h3 class="font-display text-xl font-bold text-brand-900 mt-1 leading-tight">${p.name}</h3>
+        <p class="text-amber-500 text-sm mt-1">★★★★★ <span class="text-slate-400 text-xs font-semibold">4.9</span></p>
+        <p class="text-sm text-slate-600 line-clamp-2 mt-2 flex-1">${p.desc||''}</p>
+        <label class="text-[11px] font-bold text-slate-500 mt-4">WEIGHT</label>
+        <select onchange="onCardWeight('${p.id}', this.value)" class="w-full border rounded-xl px-3 py-2.5 font-semibold bg-green-50/50 mt-1" ${isOutOfStock ? 'disabled' : ''}>${p.weights.map((x,i)=>`<option value="${i}" ${i===wi?'selected':''}>${x.label} — ${money(x.price)}</option>`).join('')}</select>
+        <div class="flex items-end justify-between mt-4"><div><p class="text-[11px] font-bold text-slate-400">PRICE</p><p id="price-${p.id}" class="font-display text-2xl font-bold text-brand-900">${money(w.price)}</p></div><span class="text-xs font-bold text-brand-700 bg-green-50 px-2 py-1 rounded-full">Free ship ₹999+</span></div>
+        <div class="grid grid-cols-2 gap-2 mt-4">
+          <button onclick="addToCart('${p.id}')" class="border-2 border-brand-700 text-brand-800 font-bold py-3 rounded-full text-sm hover:bg-green-50 ${isOutOfStock ? 'opacity-50 cursor-not-allowed' : ''}" ${isOutOfStock ? 'disabled' : ''}>🛒 Add</button>
+          <button onclick="openBuy('${p.id}')" class="bg-brand-700 hover:bg-brand-600 text-white font-bold py-3 rounded-full text-sm shadow-soft ${isOutOfStock ? 'opacity-50 cursor-not-allowed' : ''}" ${isOutOfStock ? 'disabled' : ''}>Buy Now →</button>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+}
+function onCardWeight(id, idx){
+  selectedWeight[id]=Number(idx);
+  const p=products.find(x=>x.id===id); if(!p) return;
+  const w=p.weights[Number(idx)]; const el=$('price-'+id); if(el&&w) el.textContent=money(w.price);
+}
+
+// ============ Cart ============
+function saveCart(){ localStorage.setItem('pathaayam_cart', JSON.stringify(cart)); updateCartUI(); }
+function addToCart(pid, qty=1, weightIdx=null){
+  const p=products.find(x=>x.id===pid); if(!p) return;
+  const wi = weightIdx!==null?weightIdx:(selectedWeight[pid]||0);
+  const w=p.weights[wi]||p.weights[0];
+  const key=pid+'|'+w.label;
+  const ex=cart.find(c=>c.key===key);
+  if(ex) ex.qty+=qty; else cart.push({key, pid, name:p.name, img:p.img, weight:w.label, price:w.price, qty});
+  saveCart(); toast(`${p.name} (${w.label}) added to basket 🛒`);
+}
+function updateCartUI(){
+  $('cartCount').textContent = cart.reduce((s,c)=>s+c.qty,0);
+  const total = cart.reduce((s,c)=>s+c.price*c.qty,0);
+  $('cartTotal').textContent = money(total);
+  $('freeShipMsg').textContent = total>=999 ? '🎉 You unlocked FREE delivery!' : (total>0?`Add ${money(999-total)} more for FREE delivery`:'Free delivery above ₹999');
+  $('cartItems').innerHTML = cart.length? cart.map(c=>`<div class="flex gap-3 bg-green-50/60 border border-green-50 rounded-2xl p-3">
+    <img src="${c.img||IMG_FALLBACK}" onerror="this.src='${IMG_FALLBACK}'" class="w-16 h-16 rounded-xl object-cover"/>
+    <div class="flex-1"><p class="font-bold text-sm leading-tight">${c.name}</p><p class="text-xs text-slate-500">${c.weight} • ${money(c.price)}</p>
+    <div class="flex items-center gap-2 mt-2"><button onclick="cartQty('${c.key}',-1)" class="w-7 h-7 bg-white border rounded-full font-bold">−</button><b>${c.qty}</b><button onclick="cartQty('${c.key}',1)" class="w-7 h-7 bg-brand-700 text-white rounded-full font-bold">+</button><button onclick="cartRemove('${c.key}')" class="ml-auto text-red-500 text-xs font-bold">Remove</button></div></div>
+    <b class="text-brand-900">${money(c.price*c.qty)}</b></div>`).join('')
+    : `<div class="text-center py-16"><p class="text-5xl">🧺</p><p class="font-bold mt-3">Your basket is empty</p><p class="text-sm text-slate-500">Add some farm-fresh spices!</p><button onclick="toggleCart(false);document.getElementById('shop').scrollIntoView()" class="mt-4 bg-brand-700 text-white px-6 py-3 rounded-full font-bold">Browse Spices</button></div>`;
+}
+function cartQty(key,d){ const c=cart.find(x=>x.key===key); if(!c)return; c.qty+=d; if(c.qty<1) cart=cart.filter(x=>x.key!==key); saveCart(); }
+function cartRemove(key){ cart=cart.filter(x=>x.key!==key); saveCart(); }
+function toggleCart(open){
+  $('cartDrawer').style.transform = open?'translateX(0)':'translateX(100%)';
+  $('cartOverlay').classList.toggle('hidden', !open);
+}
+function cartMessage(){
+  const total=cart.reduce((s,c)=>s+c.price*c.qty,0);
+  let lines=cart.map((c,i)=>`${i+1}. ${c.name} — ${c.weight} x ${c.qty} = ${money(c.price*c.qty)}`).join('\n');
+  return `Hello Pathaayam! 🌿 I want to place an order:\n\n${lines}\n\nTotal: ${money(total)}\n\nName: \nPhone: \nDelivery Address: \n\nPlease confirm availability & payment details. Thank you!`;
+}
+function checkoutWhatsApp(){
+  if(!cart.length) return toast('Basket is empty', false);
+  window.open(`https://wa.me/${waNumber()}?text=${encodeURIComponent(cartMessage())}`,'_blank');
+}
+function checkoutInstagram(){
+  if(!cart.length) return toast('Basket is empty', false);
+  copyText(cartMessage(),'Order details copied! Paste in Instagram DM 📸');
+  setTimeout(openInstagram, 600);
+}
+function openInstagram(){ window.open(`https://instagram.com/${igHandle()}`,'_blank'); }
+function orderWhatsAppGeneral(){ window.open(`https://wa.me/${waNumber()}?text=${encodeURIComponent('Hello Pathaayam! 🌿 I want to order your farm-fresh spices from Idukki. Please share the catalogue & prices.')}`,'_blank'); }
+
+// ============ Buy Modal ============
+function openBuy(pid){
+  const p=products.find(x=>x.id===pid); if(!p) return;
+  buyState={product:p, weightIdx:selectedWeight[pid]||0, qty:1};
+  $('buyImg').src=p.img||IMG_FALLBACK; $('buyImg').onerror=function(){this.src=IMG_FALLBACK};
+  $('buyBadge').textContent=p.badge||p.cat||''; $('buyCat').textContent=p.cat||'SPICES';
+  $('buyName').textContent=p.name; $('buyDesc').textContent=p.desc||'';
+  renderBuyWeights(); updateBuyPrice();
+  $('buyModal').classList.remove('hidden'); document.body.style.overflow='hidden';
+}
+function renderBuyWeights(){
+  $('buyWeights').innerHTML=buyState.product.weights.map((w,i)=>`<button onclick="buyWeight(${i})" class="px-4 py-2.5 rounded-full font-bold text-sm border transition ${buyState.weightIdx===i?'bg-brand-700 text-white border-brand-700':'bg-white hover:bg-green-50'}">${w.label} • ${money(w.price)}</button>`).join('');
+}
+function buyWeight(i){ buyState.weightIdx=i; renderBuyWeights(); updateBuyPrice(); }
+function changeBuyQty(d){ buyState.qty=Math.max(1, buyState.qty+d); updateBuyPrice(); }
+function updateBuyPrice(){ const w=buyState.product.weights[buyState.weightIdx]; $('buyQty').textContent=buyState.qty; $('buyPrice').textContent=money((w?.price||0)*buyState.qty); }
+function closeBuy(){ $('buyModal').classList.add('hidden'); document.body.style.overflow=''; }
+function addBuyToCart(){ addToCart(buyState.product.id, buyState.qty, buyState.weightIdx); closeBuy(); toggleCart(true); }
+
+function buildBuyMessage(){
+  const p=buyState.product, w=p.weights[buyState.weightIdx];
+  const name=$('custName').value.trim(), phone=$('custPhone').value.trim(), addr=$('custAddr').value.trim();
+  if(!name||!phone||!addr){ toast('Please fill Name, Phone & Address', false); return null; }
+  return `Hello Pathaayam! 🌿 New Order\n\nProduct: ${p.name}\nWeight: ${w.label}\nQuantity: ${buyState.qty}\nPrice: ${money(w.price*buyState.qty)}\n\nName: ${name}\nPhone: ${phone}\nAddress: ${addr}\n\nPlease confirm my order. Thank you!`;
+}
+function orderBuy(type){
+  const msg=buildBuyMessage();
+  if(!msg) return;
+  if(type==='whatsapp'){
+    const wa = waNumber();
+    window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`,'_blank');
+    toast('Opening WhatsApp with your order 💬');
+    setTimeout(closeBuy, 500);
+  }
+  else {
+    copyText(msg,'Order copied! Paste in Instagram DM 📸');
+    setTimeout(()=>{
+      openInstagram();
+      closeBuy();
+    }, 600);
+  }
+}
+
+// ============ Admin Auth ============
+function openAdminLogin(){ $('loginModal').classList.remove('hidden'); $('loginError').classList.add('hidden'); }
+function closeLogin(){ $('loginModal').classList.add('hidden'); }
+async function doLogin(){
+  const u=$('loginUser').value.trim(), p=$('loginPass').value.trim();
+  const btn=$('loginBtn'); btn.textContent='Checking Firebase... ⏳'; btn.disabled=true;
+  let ok=false, errMsg='';
+  try{
+    let admin = await dbGet('admin');
+    if(!admin){ await dbPut('admin',{username:'admin',password:'5787'}); admin={username:'admin',password:'5787'}; }
+    ok = (u===admin.username && p===String(admin.password));
+    if(!ok) errMsg='Invalid username or password. Try admin / 5787';
+  }catch(e){
+    ok = (u==='admin' && p==='5787');
+    if(!ok) errMsg='Invalid credentials (offline mode: admin / 5787)';
+  }
+  btn.textContent='Login to Dashboard →'; btn.disabled=false;
+  if(ok){ isAdmin=true; closeLogin(); $('adminModal').classList.remove('hidden'); document.body.style.overflow='hidden'; renderAdminList(); renderAdminCategories(); renderCatOptions(); fillSettingsForm(); updateRawPreview(); toast('Welcome back, Admin! ☁️'); }
+  else { $('loginError').textContent=errMsg; $('loginError').classList.remove('hidden'); }
+}
+function closeAdmin(){ $('adminModal').classList.add('hidden'); document.body.style.overflow=''; }
+function logoutAdmin(){ isAdmin=false; closeAdmin(); toast('Logged out. See you soon! 👋'); }
+function switchAdminTab(tab){
+  document.querySelectorAll('.admin-panel').forEach(el=>el.classList.add('hidden'));
+  $('panel-'+tab).classList.remove('hidden');
+  document.querySelectorAll('.admin-tab').forEach(b=>{b.className='admin-tab bg-white px-5 py-3 rounded-full font-bold text-sm border';});
+  $('tab-'+tab).className='admin-tab bg-brand-700 text-white px-5 py-3 rounded-full font-bold text-sm';
+  if(tab==='cats') renderAdminCategories();
+  if(tab==='sync') updateRawPreview();
+}
+
+// ============ Admin: Categories Panel ============
+function renderAdminCategories(){
+  if(!$('adminCategoryList')) return;
+  $('adminCatCount').textContent = categories.length+' categories';
+  $('adminCategoryList').innerHTML = categories.map(c=>{
+    const count = products.filter(p=>p.cat===c).length;
+    return `<div class="flex items-center gap-3 border rounded-2xl p-3 hover:border-green-200">
+      <div class="w-10 h-10 bg-green-50 rounded-xl grid place-items-center font-bold text-brand-800 text-sm">${count}</div>
+      <div class="flex-1 min-w-0"><p class="font-bold truncate">${c}</p><p class="text-xs text-slate-500">${count} product${count===1?'':'s'}</p></div>
+      <button onclick="renameCategory('${c.replace(/'/g,"\\'")}')" class="bg-green-50 text-brand-800 text-xs font-bold px-3 py-2 rounded-full">✏️ Rename</button>
+      <button onclick="deleteCategory('${c.replace(/'/g,"\\'")}')" class="${count>0?'bg-slate-100 text-slate-400':'bg-red-50 text-red-600'} text-xs font-bold px-3 py-2 rounded-full">🗑 Delete</button>
+    </div>`;
+  }).join('') || '<p class="text-slate-500 text-sm text-center py-8">No categories yet. Add one!</p>';
+}
+
+// ============ Admin: Products CRUD ============
+function renderCatOptions(selected){
+  const sel = $('fCatSelect'); if(!sel) return;
+  const current = selected!==undefined ? selected : (sel.value && sel.value!=='__new__' ? sel.value : categories[0]);
+  sel.innerHTML = categories.map(c=>`<option value="${c}" ${c===current?'selected':''}>${c}</option>`).join('') + `<option value="__new__">➕ Create new category…</option>`;
+  onCatSelectChange();
+}
+function toggleCategoryMode(){
+  const noCat = $('fAddNoCat').checked;
+  const catSection = $('categorySection');
+  $('fCatSelect').disabled = noCat;
+  $('fCatNew').disabled = noCat;
+  catSection.style.opacity = noCat ? '0.5' : '1';
+  catSection.style.pointerEvents = noCat ? 'none' : 'auto';
+  if(!noCat) {
+    $('fCatSelect').value = '';
+    $('fCatNew').classList.add('hidden');
+  }
+}
+function onCatSelectChange(){
+  const isNew = $('fCatSelect').value==='__new__';
+  $('fCatNew').classList.toggle('hidden', !isNew);
+  if(isNew) $('fCatNew').focus();
+}
+function renderAdminList(){
+  $('adminProdCount').textContent = products.length+' items';
+  $('adminProductList').innerHTML = products.map(p=>`<div class="flex gap-3 border rounded-2xl p-3 hover:border-green-200">
+    <img src="${p.img||IMG_FALLBACK}" onerror="this.src='${IMG_FALLBACK}'" class="w-16 h-16 rounded-xl object-cover shrink-0"/>
+    <div class="flex-1 min-w-0"><p class="font-bold leading-tight truncate">${p.name}</p><p class="text-xs text-slate-500">${p.cat} • ${p.weights.length} weight tiers</p>
+    <p class="text-xs font-bold text-brand-700 mt-1">${p.weights.map(w=>w.label+' '+money(w.price)).join('  •  ')}</p></div>
+    <div class="flex flex-col gap-1 shrink-0"><button onclick="editProduct('${p.id}')" class="bg-green-50 text-brand-800 text-xs font-bold px-3 py-2 rounded-full">✏️ Edit</button><button onclick="deleteProduct('${p.id}')" class="bg-red-50 text-red-600 text-xs font-bold px-3 py-2 rounded-full">🗑 Delete</button></div></div>`).join('') || '<p class="text-slate-500 text-sm text-center py-8">No products. Add one!</p>';
+}
+function addWeightRow(label='', price=''){
+  const row=document.createElement('div');
+  row.className='weight-row flex gap-2';
+  row.innerHTML=`<input value="${label}" placeholder='Label e.g. 1.5kg' class="wr-label flex-1 border rounded-lg px-3 py-2.5 text-sm bg-white"/><input value="${price}" type="number" placeholder="Price ₹" class="wr-price w-28 border rounded-lg px-3 py-2.5 text-sm bg-white"/><button type="button" onclick="this.parentElement.remove()" class="w-9 bg-red-50 text-red-500 rounded-lg font-bold">✕</button>`;
+  $('weightRows').appendChild(row);
+}
+function resetProductForm(){
+  $('editId').value=''; $('formTitle').textContent='Add New Product';
+  ['fName','fBadge','fDesc','fImg','fCatNew'].forEach(id=>$(id).value='');
+  renderCatOptions(categories[0]);
+  $('weightRows').innerHTML=''; addWeightRow('250g',''); addWeightRow('500g',''); addWeightRow('1kg','');
+}
+function editProduct(pid){
+  const p=products.find(x=>x.id===pid); if(!p) return;
+  $('editId').value=p.id; $('formTitle').textContent='Edit: '+p.name;
+  $('fName').value=p.name; $('fBadge').value=p.badge||''; $('fDesc').value=p.desc||''; $('fImg').value=p.img||'';
+  if(p.cat && categories.includes(p.cat)) renderCatOptions(p.cat);
+  else { $('fCatSelect').value='__new__'; $('fCatNew').value=p.cat||''; onCatSelectChange(); }
+  $('weightRows').innerHTML=''; p.weights.forEach(w=>addWeightRow(w.label, w.price));
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(() => {
+    document.querySelector('#panel-products').scrollIntoView({behavior:'smooth'});
+  }, 100);
+  toast('Editing '+p.name);
+}
+function collectWeights(){
+  return [...document.querySelectorAll('.weight-row')].map(r=>({label:r.querySelector('.wr-label').value.trim()||'250g', price:Number(r.querySelector('.wr-price').value)||0})).filter(w=>w.price>0);
+}
+async function saveProduct(){
+  const name=$('fName').value.trim();
+  if(!name) return toast('Product name is required', false);
+
+  const addNoCat = $('fAddNoCat').checked;
+  let cat = '';
+
+  // If NOT adding without category, require category selection
+  if(!addNoCat){
+    cat = $('fCatSelect').value || '';
+
+    // If creating new category
+    if(cat==='__new__'){
+      cat = $('fCatNew').value.trim();
+      if(!cat) return toast('Enter a name for the new category', false);
+      if(!categories.some(c=>c.toLowerCase()===cat.toLowerCase())){
+        categories.push(cat);
+        try{ await dbPut('categories', categories); toast(`New category "${cat}" created & synced ☁️`); }
+        catch(e){ toast('New category saved locally — sync failed', false); }
+        renderCategories(); renderAdminCategories(); renderCatOptions(cat); renderFooterCats();
+      }
+    } else if(!cat) {
+      return toast('Please select or create a category', false);
+    }
+  }
+
+  const weights=collectWeights();
+  if(!weights.length) return toast('Add at least one weight tier with price', false);
+  const btn=$('saveProdBtn'); btn.textContent='Saving to Cloud... ⏳'; btn.disabled=true; setSync('saving');
+  const editId=$('editId').value;
+  const newProd={
+    id: editId||('p'+Date.now()),
+    name,
+    cat: cat,
+    badge:$('fBadge').value.trim(),
+    desc:$('fDesc').value.trim(),
+    img:$('fImg').value.trim()||IMG_FALLBACK,
+    weights,
+    stock: $('fStock').value || 'in-stock'
+  };
+  let next;
+  if(editId) next=products.map(x=>x.id===editId?newProd:x); else next=[...products, newProd];
+  try{
+    await dbPut('products', next);
+    products=next; setSync('synced'); toast(editId?'Product updated & synced ☁️':'Product added & synced ☁️');
+  }catch(e){ setSync('error'); products=next; toast('Saved locally — Firebase sync failed (offline)', false); }
+  resetProductForm(); renderCategories(); renderProducts(); renderAdminList(); updateRawPreview();
+  btn.textContent='💾 Save Product to Firebase'; btn.disabled=false;
+}
+async function deleteProduct(pid){
+  const p=products.find(x=>x.id===pid);
+  if(!confirm(`Delete "${p?.name}" permanently? This will sync to Firebase.`)) return;
+  setSync('saving');
+  const next=products.filter(x=>x.id!==pid);
+  try{ await dbPut('products', next); setSync('synced'); toast('Product deleted & synced'); }
+  catch(e){ setSync('error'); toast('Deleted locally — sync failed', false); }
+  products=next; renderCategories(); renderProducts(); renderAdminList(); renderAdminCategories(); updateRawPreview();
+}
+
+// ============ Admin: Settings / Socials ============
+function fillSettingsForm(){
+  $('sHeadline').value=settings.headline||'';
+  $('sSub').value=settings.subheadline||'';
+  $('sIntro').value=settings.intro||'';
+  $('sAnnounce').value=settings.announcement||'';
+  $('sWhats').value=socials.whatsapp||'';
+  $('sInsta').value=socials.instagram||'';
+}
+async function saveSettings(){
+  const btn = $('saveTextBtn');
+  btn.textContent='Saving to Cloud... ⏳'; btn.disabled=true; setSync('saving');
+  settings={
+    headline:$('sHeadline').value.trim()||settings.headline,
+    subheadline:$('sSub').value.trim()||settings.subheadline,
+    intro:$('sIntro').value.trim()||settings.intro,
+    announcement:$('sAnnounce').value.trim()||settings.announcement
+  };
+  try{ await dbPut('settings', settings); setSync('synced'); toast('Text settings synced to Firebase ☁️'); }
+  catch(e){ setSync('error'); toast('Saved locally — sync failed (offline)', false); }
+  applySettings(); updateRawPreview();
+  btn.textContent='💾 Save & Sync to Cloud'; btn.disabled=false;
+}
+async function saveSocials(){
+  const wa = $('sWhats').value.replace(/\D/g,'') || socials.whatsapp;
+  const ig = $('sInsta').value.trim() || socials.instagram;
+  if(!wa) return toast('WhatsApp number is required', false);
+  const btn=$('saveSocialBtn'); btn.textContent='Syncing to Firebase... ⏳'; btn.disabled=true; setSync('saving');
+  const payload = {whatsapp: wa, instagram: ig};
+  try{
+    await dbPut('socials', payload);
+    const verify = await dbGet('socials');
+    if(verify && String(verify.whatsapp||'').replace(/\D/g,'')===wa){
+      socials = {...payload};
+      firebaseOnline = true; setSync('synced');
+      updateSocialStatus(`✅ Verified on Firebase — wa.me/${wa} & @${igHandle()} are live for all visitors`, 'bg-green-50 text-brand-800 border border-green-100');
+      toast('Socials synced & verified on Firebase ☁️');
+    } else {
+      throw new Error('Verification mismatch');
+    }
+  }catch(e){
+    socials = {...payload};
+    setSync('error');
+    updateSocialStatus('⚠️ Could not verify write — Firebase unreachable, saved locally', 'bg-red-50 text-red-700 border border-red-100');
+    toast('Saved locally — Firebase sync failed (offline)', false);
+  }
+  applySettings(); updateRawPreview();
+  btn.textContent='💾 Save Socials & Sync'; btn.disabled=false;
+}
+function testSocialLinks(){
+  const wa = $('sWhats').value.replace(/\D/g,'') || socials.whatsapp;
+  window.open(`https://wa.me/${wa}?text=${encodeURIComponent('Hello Pathaayam! 🌿 Testing the order link.')}`,'_blank');
+}
+async function resetToDefaults(){
+  if(!confirm('Overwrite Firebase products, categories & settings with defaults?')) return;
+  setSync('saving');
+  try{
+    await dbPut('products', DEFAULT_PRODUCTS);
+    await dbPut('categories', DEFAULT_CATEGORIES);
+    await dbPut('settings', DEFAULT_SETTINGS);
+    await dbPut('socials', DEFAULT_SOCIALS);
+    products=[...DEFAULT_PRODUCTS]; categories=[...DEFAULT_CATEGORIES]; settings={...DEFAULT_SETTINGS}; socials={...DEFAULT_SOCIALS};
+    setSync('synced'); toast('Reset to defaults & synced ☁️');
+  }catch(e){ setSync('error'); toast('Reset failed — offline', false); }
+  activeCategory='All';
+  refreshAllUI();
+}
+function updateRawPreview(){
+  const el=$('rawPreview'); if(!el) return;
+  el.textContent=JSON.stringify({socials, settings, categories, products: products.map(p=>({name:p.name, cat:p.cat, weights:p.weights}))},null,2);
+}
+
+// ============ Counters & Init ============
+function animateCounters(){
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const target=+el.dataset.count; let cur=0; const step=Math.max(1,Math.floor(target/60));
+    const t=setInterval(()=>{ cur+=step; if(cur>=target){cur=target; clearInterval(t);} el.textContent=cur.toLocaleString('en-IN'); },24);
+  });
+}
+
+showSkeletons();
+resetProductForm();
+updateCartUI();
+loadFromFirebase().then(animateCounters);
+</script>
+</body>
+</html>
